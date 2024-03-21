@@ -4,14 +4,14 @@ import UNISWAP_POOL_ABI from '../abi/swap.json';
 
 const UNISWAP_POOL_ADDRESS = import.meta.env.VITE_UNISWAP_POOL_ETH_USDT_ADDRESS;
 const NETWORK = import.meta.env.VITE_INFURA_NETWORK;
-const KEY = import.meta.env.VITE_INFURA_API_KEY;
+const VITE_INFURA_API_KEY = import.meta.env.VITE_INFURA_API_KEY;
 
 const webSocketProvider = new ethers.WebSocketProvider(
-  `wss://${NETWORK}.infura.io/ws/v3/${KEY}`
+  `wss://${NETWORK}.infura.io/ws/v3/${VITE_INFURA_API_KEY}`
 );
 
 const jsonRpcProvider = new ethers.JsonRpcProvider(
-  `https://${NETWORK}.infura.io/v3/${KEY}`
+  `https://${NETWORK}.infura.io/v3/${VITE_INFURA_API_KEY}`
 );
 
 const poolContract = new ethers.Contract(

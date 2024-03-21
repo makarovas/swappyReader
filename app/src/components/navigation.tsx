@@ -36,8 +36,8 @@ export const Navigation = () => {
                   </Link>
                 </li>
                 <li class='inline-block py-1 px-3 text-gray-400 cursor-not-allowed mr-3'>
-                  <Link activeClassName='active' href='/arb'>
-                    Arb
+                  <Link activeClassName='active' href='/dexs'>
+                    Dexs
                   </Link>
                 </li>
                 <li class='inline-block py-1 px-3 text-gray-400 cursor-not-allowed mr-3'>
