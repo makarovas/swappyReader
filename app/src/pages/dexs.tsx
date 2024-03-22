@@ -8,12 +8,9 @@ interface CryptoQuote {
   quote: {
     USD: {
       price: number;
-      // Дополнительные поля котировки, если необходимо
     };
   };
 }
-
-const VITE_COINMARKETCAP_API_KEY = import.meta.env.VITE_COINMARKETCAP_API_KEY;
 
 const DexQuotes: React.FC = () => {
   const [quotes, setQuotes] = useState<CryptoQuote[] | null>(null);
@@ -21,20 +18,13 @@ const DexQuotes: React.FC = () => {
   useEffect(() => {
     const getQuotes = async () => {
       try {
+        // Изменили на адрес прокси-сервера, предполагая что он запущен локально на порту 3000
         const response = await axios.get(
-          'https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/listings/latest',
-          {
-            headers: {
-              'X-CMC_PRO_API_KEY': VITE_COINMARKETCAP_API_KEY,
-            },
-          }
+          'http://localhost:3000/cryptocurrency/listings/latest'
         );
-
-        const quotes: CryptoQuote[] = response.data.data;
-        console.log(quotes); // Логировать котировки
-        setQuotes(quotes); // Сохранить котировки в состоянии
-      } catch (ex) {
-        console.error('Error fetching quotes:', ex);
+        setQuotes(response.data.data); // CoinMarketCap возвращает список котировок в {data: [...] }
+      } catch (error) {
+        console.error('Error fetching quotes:', error);
       }
     };
 

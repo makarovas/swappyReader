@@ -6,7 +6,7 @@ import Swap from './pages/swap';
 
 export function App() {
   return (
-    <div id='app'>
+    <div id='app' style={{ width: '100%' }}>
       <Navigation />
       <Router>
         <Home path='/' />
