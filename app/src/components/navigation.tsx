@@ -89,30 +89,5 @@ export const Navigation = () => {
         </div>
       </div>
     </header>
-
-    // <nav>
-    //   <ul class='flex'>
-    //     <li class='inline-block border border-blue-500 rounded py-1 px-3 bg-blue-500 text-white mr-3'>
-    //       <Link activeClassName='active' href='/'>
-    //         Home
-    //       </Link>
-    //     </li>
-    //     <li class='inline-block border border-white rounded hover:border-gray-200 text-blue-500 hover:bg-gray-200 py-1 px-3 mr-3'>
-    //       <Link activeClassName='active' href='/swap'>
-    //         Swap
-    //       </Link>
-    //     </li>
-    //     <li class='inline-block py-1 px-3 text-gray-400 cursor-not-allowed mr-3'>
-    //       <Link activeClassName='active' href='/arb'>
-    //         Arb
-    //       </Link>
-    //     </li>
-    //     <li class='inline-block py-1 px-3 text-gray-400 cursor-not-allowed mr-3'>
-    //       <Link activeClassName='active' href='/arb'>
-    //         Docs
-    //       </Link>
-    //     </li>
-    //   </ul>
-    // </nav>
   );
 };
