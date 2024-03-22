@@ -18,7 +18,6 @@ const DexQuotes: React.FC = () => {
   useEffect(() => {
     const getQuotes = async () => {
       try {
-        // Изменили на адрес прокси-сервера, предполагая что он запущен локально на порту 3000
         const response = await axios.get(
           'http://localhost:3000/cryptocurrency/listings/latest'
         );

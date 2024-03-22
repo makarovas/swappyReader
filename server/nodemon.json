@@ -1,0 +1,9 @@
+{
+    "watch": [
+        "*.ts"
+    ],
+    "ignore": [
+        "*.js"
+    ],
+    "exec": "ts-node ./server.ts"
+}
