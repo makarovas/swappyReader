@@ -1,5 +1,5 @@
-import { render } from 'preact'
-import { App } from './app.tsx'
-import './index.css'
+import { render } from 'preact';
+import { AppProvider } from './AppClients.tsx';
+import './index.css';
 
-render(<App />, document.getElementById('app')!)
+render(<AppProvider />, document.getElementById('app')!);

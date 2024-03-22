@@ -21,7 +21,7 @@ const DexQuotes: React.FC = () => {
         const response = await axios.get(
           'http://localhost:3000/cryptocurrency/listings/latest'
         );
-        setQuotes(response.data.data); // CoinMarketCap возвращает список котировок в {data: [...] }
+        setQuotes(response.data.data);
       } catch (error) {
         console.error('Error fetching quotes:', error);
       }
