@@ -21,6 +21,8 @@ const DexQuotes: React.FC = () => {
         const response = await axios.get(
           'http://localhost:3000/cryptocurrency/listings/latest'
         );
+        await axios.get('http://localhost:3000/alchemy/list');
+        // console.log(response2);
         setQuotes(response.data.data);
       } catch (error) {
         console.error('Error fetching quotes:', error);
